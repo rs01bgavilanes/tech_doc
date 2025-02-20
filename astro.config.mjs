@@ -6,17 +6,22 @@ import { defineConfig } from "astro/config";
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: "My Docs",
+			title: "Revolution Supply",
 			social: {
 				github: "https://github.com/withastro/starlight",
 			},
 			sidebar: [
 				{
-					label: "Guides",
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: "Example Guide", slug: "guides/example" },
-					],
+					label: "Power BI",
+					autogenerate: { directory: "power_bi" },
+				},
+				{
+					label: "CI/CD Pipeline",
+					autogenerate: { directory: "devops" },
+				},
+				{
+					label: "Adobe Commerce",
+					autogenerate: { directory: "adobe_commerce" },
 				},
 				{
 					label: "Reference",
